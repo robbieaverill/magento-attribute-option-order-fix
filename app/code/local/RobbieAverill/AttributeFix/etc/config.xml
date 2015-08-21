@@ -2,16 +2,14 @@
 <config>
     <modules>
         <RobbieAverill_AttributeFix>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </RobbieAverill_AttributeFix>
     </modules>    
     <global>
         <models>
             <catalog_resource>
                 <rewrite>
-                    <product_type_configurable_attribute_collection>
-                        RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attribute_Collection
-                    </product_type_configurable_attribute_collection>
+                    <product_type_configurable_attribute_collection>RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attribute_Collection</product_type_configurable_attribute_collection>
                 </rewrite>
             </catalog_resource>
         </models>
