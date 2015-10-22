@@ -17,6 +17,7 @@ You can use this extension module to restore to relevance ordering until the cor
 
 * Updated docblocks and readme
 * Return `self` instead of the full class name
+* Added `modman` config file (@ngongoll)
 
 ### 0.1.1
 
