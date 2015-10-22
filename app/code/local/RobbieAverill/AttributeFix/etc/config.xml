@@ -1,8 +1,17 @@
 <?xml version="1.0"?>
 <config>
+    <!--
+    /**
+     * Magento configurable attribute order fix - replace entity ID with relevance (Magento bugfix)
+     *
+     * @category Mage
+     * @package  RobbieAverill_AttributeFix
+     * @author   Robbie Averill <robbie@averill.co.nz>
+     */
+    -->
     <modules>
         <RobbieAverill_AttributeFix>
-            <version>0.1.1</version>
+            <version>0.1.2</version>
         </RobbieAverill_AttributeFix>
     </modules>    
     <global>

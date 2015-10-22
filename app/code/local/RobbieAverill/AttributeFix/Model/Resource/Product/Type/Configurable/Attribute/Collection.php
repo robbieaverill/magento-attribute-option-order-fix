@@ -2,6 +2,10 @@
 /**
  * Catalog Configurable Product Attribute Collection - overridden to re-enable the attribute option
  * sorting by relevance rather than by ID as changed in the Magento core class
+ *
+ * @category Mage
+ * @package  RobbieAverill_AttributeFix
+ * @author   Robbie Averill <robbie@averill.co.nz>
  */
 class RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attribute_Collection
     extends Mage_Catalog_Model_Resource_Product_Type_Configurable_Attribute_Collection
@@ -9,7 +13,7 @@ class RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attrib
     /**
      * Load attribute prices information
      *
-     * @return Mage_Catalog_Model_Resource_Product_Type_Configurable_Attribute_Collection
+     * @return self
      */
     protected function _loadPrices()
     {
@@ -57,7 +61,7 @@ class RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attrib
 
                 /**
                  * Modification to re-enable the sorting by relevance for attribute options
-                 * @author Robbie Averill <robbie.averill@kathmandu.co.nz>
+                 * @author Robbie Averill <robbie@averill.co.nz>
                  */
                 $toAdd = array();
                 foreach ($this->getProduct()->getTypeInstance(true)
@@ -90,7 +94,7 @@ class RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attrib
                 }
                 /**
                  * End attribute option order modification
-                 * @author Robbie Averill <robbie.averill@kathmandu.co.nz>
+                 * @author Robbie Averill <robbie@averill.co.nz>
                  */
             }
 
