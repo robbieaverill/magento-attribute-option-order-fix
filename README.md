@@ -1,5 +1,9 @@
 # Magento configurable product attribute order fix
 
+## Builds
+
+[![Build Status](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix.svg?branch=master)](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix)
+
 A module to re-apply the relevance ordering for configurable attribute options in Magento CE 1.9.1, 1.9.2 or EE 1.14.2.
 
 Why? The logic was changed in the recent version of core Magento to avoid nested `foreach` statements, but in turn lost the relevance ordering in favour of ordering by the attribute IDs.
@@ -12,6 +16,11 @@ You can use this extension module to restore to relevance ordering until the cor
 * Conflict possible with the ConfigurableSwatches module recently introduced since it references the collection resource class directly via hierarchy
 
 ## Changelog:
+
+### 0.1.3
+
+* Added configuration unit tests
+* Added Travis CI build configuration
 
 ### 0.1.2
 
