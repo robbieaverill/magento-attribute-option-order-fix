@@ -1,0 +1,48 @@
+language: php
+
+sudo: false
+
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+
+branches:
+  only:
+    - master
+    - develop
+    - /^(bugfix|feature)/\.*$/
+
+# Env settings originally copied from netz98/n98-magerun. We don't need older Magento versions since this
+# is a recently introduced bug.
+env:
+  - MAGENTO_VERSION="magento-mirror-1.7.0.2" DB=mysql INSTALL_SAMPLE_DATA=yes
+  - MAGENTO_VERSION="magento-mirror-1.8.1.0" DB=mysql INSTALL_SAMPLE_DATA=yes
+  # Do not download sample data of 1.9 -> The file is too big
+  - MAGENTO_VERSION="magento-mirror-1.9.0.1" DB=mysql INSTALL_SAMPLE_DATA=no
+  - MAGENTO_VERSION="magento-mirror-1.9.1.1" DB=mysql INSTALL_SAMPLE_DATA=no
+  - MAGENTO_VERSION="magento-mirror-1.9.2.1" DB=mysql INSTALL_SAMPLE_DATA=no
+  - MAGENTO_VERSION="magento-mirror-1.9.2.2" DB=mysql INSTALL_SAMPLE_DATA=no
+
+# Before script commands copied from the EcomDev PHPUnit configuration, to re-use the EcomDev_MageCI module for
+# running this against multiple Magento versions
+before_script:
+  - MAGE_DIR=tests/magento
+  # Copying travis composer.json to test only module
+  - cp -f .travis/composer.json composer.json
+  # Installing dependencies
+  - composer install
+  # Installing magento version with prepared DB dump
+  - bin/mage-ci install $MAGE_DIR $MAGE magento -c -r http://mage-ci.ecomdev.org
+  # Installing EcomDev_PHPUnit module
+  - bin/mage-ci install-module $MAGE_DIR $(pwd)
+  # Configuring EcomDev_PHPUnit module
+  - bin/mage-ci shell $MAGE_DIR ecomdev-phpunit.php -a magento-config --db-name magento --same-db 1 --base-url http://test.magento.com/
+  # Configuring test suite
+  - bin/mage-ci shell $MAGE_DIR ecomdev-phpunit.php -a change-status --enable
+  # Copying phpunit.xml for travis builds
+  - cp .travis/phpunit.xml $MAGE_DIR/phpunit.xml
+
+script:
+  # output php ini info for checking the problem
+  - bin/mage-ci phpunit $MAGE_DIR --colors --coverage-text -d display_errors=1
