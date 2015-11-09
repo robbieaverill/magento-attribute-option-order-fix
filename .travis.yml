@@ -21,3 +21,4 @@ script:
   - curl -sSL https://raw.githubusercontent.com/AOEpeople/MageTestStand/master/setup.sh | bash
   - ls -lah
   - phpunit --group RobbieAverill_AttributeFix
+  - pwd
