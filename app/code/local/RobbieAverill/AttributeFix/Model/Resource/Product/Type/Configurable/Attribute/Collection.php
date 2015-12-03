@@ -78,7 +78,7 @@ class RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attrib
                 // Add the attribute options, but in the relevant order rather than by ID
                 foreach (array_intersect_key($optionsByValue, array_flip($toAdd)) as $optionValueKey => $optionValue) {
                     // If option available in associated product
-                    if (!isset($values[$item->getId() . ':' . $optionValue])) {
+                    if (!isset($values[$item->getId() . ':' . $optionValueKey])) {
                         // If option not added, we will add it.
                         $values[$item->getId() . ':' . $optionValueKey] = array(
                             'product_super_attribute_id' => $item->getId(),
