@@ -17,6 +17,10 @@ You can use this extension module to restore to relevance ordering until the cor
 
 ## Changelog:
 
+### 1.0.0
+
+* Fix #9 - clash between keys and values (thanks @bincani)
+
 ### 0.1.3
 
 * Added configuration unit tests
