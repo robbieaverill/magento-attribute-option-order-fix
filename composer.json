@@ -1,0 +1,17 @@
+{
+    "name": "robbieaverill/magento-attribute-option-order-fix",
+    "description": "Magento configurable attribute option order fix",
+    "type": "magento-module",
+    "require": {
+        "php": ">=5.3",
+        "magento-hackathon/magento-composer-installer": "~3.0"
+    },
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Robbie Averill",
+            "email": "robbie@averill.co.nz",
+            "role": "Author/Maintainer"
+        }
+    ]
+}
