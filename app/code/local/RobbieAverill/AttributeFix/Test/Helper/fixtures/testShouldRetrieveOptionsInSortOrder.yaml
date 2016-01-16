@@ -1,0 +1,28 @@
+# A set of attribute options in reverse order from their entity IDs
+tables:
+    eav/attribute_option:
+        - option_id: 1
+          attribute_id: 18
+          sort_order: 40
+        - option_id: 2
+          attribute_id: 18
+          sort_order: 30
+        - option_id: 3
+          attribute_id: 18
+          sort_order: 20
+        - option_id: 4
+          attribute_id: 18
+          sort_order: 10
+# Then, a set of attribute options that have no sort order at all
+        - option_id: 10
+          attribute_id: 20
+          sort_order: 0
+        - option_id: 11
+          attribute_id: 20
+          sort_order: 0
+        - option_id: 12
+          attribute_id: 20
+          sort_order: 0
+        - option_id: 13
+          attribute_id: 20
+          sort_order: 0

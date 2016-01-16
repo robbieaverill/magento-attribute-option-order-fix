@@ -11,16 +11,31 @@
     -->
     <modules>
         <RobbieAverill_AttributeFix>
-            <version>1.0.1</version>
+            <version>1.1.1</version>
         </RobbieAverill_AttributeFix>
     </modules>    
     <global>
+        <helpers>
+            <attributefix>
+                <class>RobbieAverill_AttributeFix_Helper</class>
+            </attributefix>
+            <configurableswatches>
+                <rewrite>
+                    <mediafallback>RobbieAverill_AttributeFix_Helper_Mediafallback</mediafallback>
+                </rewrite>
+            </configurableswatches>
+        </helpers>
         <models>
             <catalog_resource>
                 <rewrite>
                     <product_type_configurable_attribute_collection>RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attribute_Collection</product_type_configurable_attribute_collection>
                 </rewrite>
             </catalog_resource>
+            <configurableswatches_resource>
+                <rewrite>
+                    <catalog_product_attribute_super_collection>RobbieAverill_AttributeFix_Model_Resource_Catalog_Product_Attribute_Super_Collection</catalog_product_attribute_super_collection>
+                </rewrite>
+            </configurableswatches_resource>
         </models>
     </global>
     <phpunit>

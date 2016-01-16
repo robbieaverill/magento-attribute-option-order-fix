@@ -1,0 +1,22 @@
+# All options have a sort order
+-
+    - 1
+    - 12: attr
+      14: attr2
+      16: attr3
+      18: attr4
+    - 14: 1
+      18: 2
+      12: 3
+      16: 4
+# All sort orders are zero
+-
+    - 2
+    - 1: attr
+      2: attr2
+      3: attr3
+      4: attr4
+    - 1: 0
+      2: 0
+      3: 0
+      4: 0
