@@ -1,0 +1,14 @@
+# All options have a sort order
+tc_1:
+  result:
+    14: attr2
+    18: attr4
+    12: attr
+    16: attr3
+# All sort orders are zero
+tc_2:
+  result:
+    1: attr
+    2: attr2
+    3: attr3
+    4: attr4

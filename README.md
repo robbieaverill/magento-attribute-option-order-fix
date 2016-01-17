@@ -13,9 +13,14 @@ You can use this extension module to restore to relevance ordering until the cor
 ## Notes:
 
 * Updated to work correctly on Magento CE 1.9.2
-* Conflict possible with the ConfigurableSwatches module recently introduced since it references the collection resource class directly via hierarchy
+* Uses traits, so no longer supports PHP 5.3 or lower. Minimum 5.4 required.
 
 ## Changelog:
+
+### 1.1.1
+
+* Fix #12 - added support for ordering swatch options
+* Removed support for PHP 5.3 as we use traits now
 
 ### 1.0.1
 
