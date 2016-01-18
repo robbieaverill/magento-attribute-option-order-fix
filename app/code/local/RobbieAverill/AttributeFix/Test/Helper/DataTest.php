@@ -24,7 +24,7 @@ class RobbieAverill_AttributeFix_Test_Helper_DataTest extends EcomDev_PHPUnit_Te
         $mock = $this->getHelperMock('attributefix', ['getSortOrderForAttributeOptions']);
 
         $mock
-            ->expects($this->once())
+            ->expects(empty($input) ? $this->any() : $this->once())
             ->method('getSortOrderForAttributeOptions')
             ->will($this->returnValue($order));
 

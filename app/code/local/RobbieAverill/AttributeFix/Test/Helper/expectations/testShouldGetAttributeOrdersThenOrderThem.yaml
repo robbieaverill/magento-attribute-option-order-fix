@@ -12,3 +12,6 @@ tc_2:
     2: attr2
     3: attr3
     4: attr4
+# No options - whatever passed in should be returned
+tc_3:
+  result: []
