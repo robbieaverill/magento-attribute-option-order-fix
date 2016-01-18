@@ -17,6 +17,10 @@ You can use this extension module to restore to relevance ordering until the cor
 
 ## Changelog:
 
+### 1.1.2
+
+* Fix #12 - hot fix for empty attribute option arrays in the helper
+
 ### 1.1.1
 
 * Fix #12 - added support for ordering swatch options
