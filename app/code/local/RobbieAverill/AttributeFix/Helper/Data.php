@@ -15,9 +15,12 @@ class RobbieAverill_AttributeFix_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function sortOptionValues($options)
     {
+        if (empty($options)) {
+            return $options;
+        }
         $optionIds = array_keys($options);
-        $sortOrder = $this->getSortOrderForAttributeOptions($optionIds);
 
+        $sortOrder = $this->getSortOrderForAttributeOptions($optionIds);
         foreach ($sortOrder as $optionId => &$value) {
             $value = $options[$optionId];
         }
