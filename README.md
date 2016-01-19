@@ -17,6 +17,10 @@ You can use this extension module to restore to relevance ordering until the cor
 
 ## Changelog:
 
+### 1.1.3
+
+* Fix #11 - prices cleared when creating simple products in admin
+
 ### 1.1.2
 
 * Fix #12 - hot fix for empty attribute option arrays in the helper
