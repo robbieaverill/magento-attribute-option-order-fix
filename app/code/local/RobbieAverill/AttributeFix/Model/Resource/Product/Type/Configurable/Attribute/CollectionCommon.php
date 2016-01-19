@@ -81,7 +81,7 @@ trait RobbieAverill_AttributeFix_Model_Resource_Product_Type_Configurable_Attrib
                         // If option not added, we will add it.
                         $values[$item->getId() . ':' . $optionValueKey] = array(
                             'product_super_attribute_id' => $item->getId(),
-                            'value_index'                => $optionValueKey,
+                            'value_index'                => (string)$optionValueKey,
                             'label'                      => $optionsByValue[$optionValueKey],
                             'default_label'              => $optionsByValue[$optionValueKey],
                             'store_label'                => $optionsByValue[$optionValueKey],
