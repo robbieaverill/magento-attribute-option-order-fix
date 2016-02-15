@@ -1,8 +1,8 @@
 # Magento configurable product attribute order fix
 
-## Builds
+[![Build Status](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix.svg?branch=master)](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix) [![Packagist](https://img.shields.io/packagist/v/robbieaverill/magento-attribute-option-order-fix.svg)](https://packagist.org/packages/robbieaverill/magento-attribute-option-order-fix) [![Packagist](https://img.shields.io/packagist/dt/robbieaverill/magento-attribute-option-order-fix.svg)](https://packagist.org/packages/robbieaverill/magento-attribute-option-order-fix)
 
-[![Build Status](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix.svg?branch=master)](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix)
+## Information
 
 A module to re-apply the relevance ordering for configurable attribute options in Magento CE 1.9.1, 1.9.2 or EE 1.14.2.
 
@@ -10,12 +10,38 @@ Why? The logic was changed in the recent version of core Magento to avoid nested
 
 You can use this extension module to restore to relevance ordering until the core resource model has been updated by Magento.
 
+## Installation
+
+#### Install using composer
+
+```
+$ composer require robbieaverill/magento-attribute-option-order-fix
+```
+
+#### Install using modman
+
+```
+$ modman init
+$ modman clone https://github.com/robbieaverill/magento-attribute-option-order-fix
+```
+
+#### Manual installation
+
+* Clone this repository
+* Copy the `app/code/local` files into your Magento codebase
+* Copy the `app/etc/modules/RobbieAverill_AttributeFix.xml` file into your `app/etc/modules` folder
+* Clear your cache
+
 ## Notes:
 
 * Updated to work correctly on Magento CE 1.9.2
 * Uses traits, so no longer supports PHP 5.3 or lower. Minimum 5.4 required.
 
 ## Changelog:
+
+### 1.1.4
+
+* Added Packagist support. Updated composer PHP version requirement to 5.4.
 
 ### 1.1.3
 
