@@ -3,9 +3,7 @@
     "description": "Magento configurable attribute option order fix",
     "type": "magento-module",
     "require": {
-        "php": ">=5.4"
-    },
-    "require-dev": {
+        "php": ">=5.4",
         "magento-hackathon/magento-composer-installer": "~3.0"
     },
     "keywords": ["magento", "attribute"],
