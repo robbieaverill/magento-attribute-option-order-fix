@@ -1,6 +1,6 @@
 # Magento configurable product attribute order fix
 
-i[![Build Status](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix.svg?branch=master)](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix) [![Packagist](https://img.shields.io/packagist/v/robbieaverill/magento-attribute-option-order-fix.svg)](https://packagist.org/packages/robbieaverill/magento-attribute-option-order-fix)
+[![Build Status](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix.svg?branch=master)](https://travis-ci.org/robbieaverill/magento-attribute-option-order-fix) [![Packagist](https://img.shields.io/packagist/v/robbieaverill/magento-attribute-option-order-fix.svg)](https://packagist.org/packages/robbieaverill/magento-attribute-option-order-fix)
 
 ## Information
 
