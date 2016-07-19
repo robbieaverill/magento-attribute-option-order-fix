@@ -4,6 +4,18 @@
 
 ## Information
 
+### Magento patch
+
+**Please note:** According to the [bug report](https://www.magentocommerce.com/bug-tracking/issue/index/id/413), Magento have scheduled a patch for this issue to be released (CE 1.9.3):
+
+>The issue is scheduled for next minor (not patch) release that is expected in H1 2016.
+>
+> *14/08/2015 4:02PM*
+
+When this patch is deployed, this module will be marked as deprecated. It will remain available for anyone who wants to use it in older versions of Magento (pre 1.9.3).
+
+---
+
 A module to re-apply the relevance ordering for configurable attribute options in Magento CE 1.9.1, 1.9.2 or EE 1.14.2.
 
 Why? The logic was changed in the recent version of core Magento to avoid nested `foreach` statements, but in turn lost the relevance ordering in favour of ordering by the attribute IDs.
